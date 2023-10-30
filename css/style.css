@@ -17,6 +17,40 @@ main {
 main .sidebarleft {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+main .sidebarleft h2 {
+  padding-top: 2vw;
+  font-size: 2.5rem;
+}
+
+main .sidebarleft .sidebarleft_center {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+main .sidebarleft .sidebarleft_center .sidebarleft_center_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  margin-top: 18vh;
+}
+
+main .sidebarleft .sidebarleft_center .dayname,
+main .sidebarleft .sidebarleft_center .date {
+  margin: 2vw;
+}
+
+main .sidebarleft .sidebarleft_center .time {
+  margin: 2vw;
+  border-radius: 30px;
+  border: 3px solid white;
+  padding: 1.5rem;
+  width: 6vw;
 }
 
 main .center {
@@ -56,19 +90,19 @@ main .center .month ul li {
   align-items: center;
   width: 5vw;
   height: 5vw;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
   color: black;
   font-size: 2rem;
   user-select: none;
   background-color: #e4f0ff;
-  border: 2px solid #aad3ff;
+  border: 3px solid #aad3ff;
 }
 
 main .center .month ul .zaterdag,
 main .center .month ul .zondag {
   background-color: salmon;
-  border: 2px solid red;
+  border: 3px solid red;
 }
 
 main .center .month ul .in:hover {
@@ -92,12 +126,12 @@ main .sidebarright {
   height: 92vh;
   margin-top: 4vh;
   margin-bottom: 4vh;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .2);
 }
 
 main .center .month ul .today {
   background-color: #219fdf;
-  border: 2px solid #0075b9;
+  border: 3px solid #0075b9;
 }
 
 main .center .month ul .today a {
@@ -106,7 +140,7 @@ main .center .month ul .today a {
 }
 
 main .center .month ul .out {
-  border: 2px solid grey;
+  border: 3px solid grey;
   background-color: darkgrey;
   cursor: default;
 }

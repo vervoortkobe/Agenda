@@ -1,12 +1,12 @@
 class Day {
-  #taken;
+  #taak;
   #datum;
   #dagNaam;
   #maand;
   #jaar;
 
-  constructor(taken, datum, dagNaam, maand, jaar) {
-    this.#taken = taken;
+  constructor(taak, datum, dagNaam, maand, jaar) {
+    this.#taak = taak;
     this.#datum = datum;
     this.#dagNaam = dagNaam;
     this.#maand = maand;

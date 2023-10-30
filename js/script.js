@@ -8,8 +8,12 @@ const firstDayOfThisMonthName = weekdays[new Date(new Date().getFullYear(), new 
 const todayDate = new Date().getDate();
 const thisYear = new Date().getFullYear();
 
-//SET MAAND NAAM H2
-document.getElementById("monthname").innerHTML = thisMonthName + ` <span style="font-size: 1.5rem;">#${countThisMonthNumber}</span>`;
+//SET NAMES
+document.querySelector("#monthname").innerText = thisMonthName;
+document.querySelector(".dayname").innerText = capitalize(calcDayName(todayDate));
+document.querySelector(".date").innerText = `${todayDate}/${countThisMonthNumber}/${thisYear}`;
+setTime();
+setInterval(() => setTime(), 1000);
 
 let daysInThisMonth = "";
 for (let i = 0; i < amountDaysInThisMonth; i++) {
@@ -31,21 +35,22 @@ for (let i = 0; i < weekdays.length; i++) {
 }
 
 const calendar = daysOutThisMonthBefore + daysInThisMonth + daysOutThisMonthAfter;
-document.getElementById("daysul").innerHTML = calendar;
-
-function edit(a) {
-  console.log(a);
-}
-
-function t() {
-  let hours = new Date().getHours();
-  let minutes = new Date().getMinutes();
-  let secs = new Date().getSeconds();
-  let time = `${hours}:${minutes}:${secs}`;
-  document.getElementById("monthname").innerText = time;
-}
-//setInterval(() => t(), 1000);
+document.querySelector("#daysul").innerHTML = calendar;
 
 function calcDayName(countDayInMonth) {
   return weekdays[new Date(new Date().getFullYear(), new Date().getMonth(), countDayInMonth).getDay()].toLowerCase();
+}
+
+function capitalize(dayname) {
+  return dayname.charAt(0).toUpperCase() + dayname.slice(1);
+}
+
+function setTime() {
+  document.querySelector("#hours").innerText = new Date().getHours();
+  document.querySelector("#minutes").innerText = new Date().getMinutes();
+  document.querySelector("#seconds").innerText = new Date().getSeconds();
+}
+
+function showTasks() {
+
 }
