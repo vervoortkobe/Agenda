@@ -1,0 +1,20 @@
+<section class="center">
+  <section class="month">
+    <h2 id="monthname">{{ thisMonthName }}</h2>
+    <ul id="daysul">
+      <ng-container *ngFor="let before of daysOutThisMonthBefore">
+        <li class="out"><a></a></li>
+      </ng-container>
+      <ng-container *ngFor="let day of calendar">
+        <li *ngIf="day.today" id="{{day.year}}-{{day.month}}_{{day.date}}" class="in today {{day.date}}">
+          <a>{{day.date}}</a>
+        </li>
+        <li *ngIf="!day.today" id="{{day.year}}-{{day.month}}_{{day.date}}" class="in {{day.day}}"><a>{{day.date}}</a>
+        </li>
+      </ng-container>
+      <ng-container *ngFor="let after of daysOutThisMonthAfter">
+        <li class="out"><a></a></li>
+      </ng-container>
+    </ul>
+  </section>
+</section>

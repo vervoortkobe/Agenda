@@ -1,0 +1,42 @@
+.sidebarleft {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 92vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.sidebarleft h2 {
+  padding-top: 2vw;
+  font-size: 2.5rem;
+}
+
+.sidebarleft .sidebarleft_center {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+.sidebarleft .sidebarleft_center .sidebarleft_center_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  margin-top: 18vh;
+}
+
+.sidebarleft .sidebarleft_center .dayname,
+.sidebarleft .sidebarleft_center .date {
+  margin: 2vw;
+}
+
+.sidebarleft .sidebarleft_center .time {
+  margin: 2vw;
+  border-radius: 30px;
+  border: 3px solid white;
+  padding: 1.5rem;
+  width: 6vw;
+}
