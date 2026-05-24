@@ -1,0 +1,146 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  background-image: url("./img/blue-bg.svg");
+}
+
+header nav ul li {
+  background-color: red;
+  display: inline-block;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+}
+
+main .sidebarleft {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+main .sidebarleft h2 {
+  padding-top: 2vw;
+  font-size: 2.5rem;
+}
+
+main .sidebarleft .sidebarleft_center {
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+main .sidebarleft .sidebarleft_center .sidebarleft_center_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  margin-top: 18vh;
+}
+
+main .sidebarleft .sidebarleft_center .dayname,
+main .sidebarleft .sidebarleft_center .date {
+  margin: 2vw;
+}
+
+main .sidebarleft .sidebarleft_center .time {
+  margin: 2vw;
+  border-radius: 30px;
+  border: 3px solid white;
+  padding: 1.5rem;
+  width: 6vw;
+}
+
+main .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .center .month {
+  border: 2px solid black;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+}
+
+main .center .month h2 {
+  padding-bottom: 2vw;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+}
+
+main .center .month ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+main .center .month ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 20px;
+  cursor: pointer;
+  color: black;
+  font-size: 2rem;
+  user-select: none;
+  background-color: #e4f0ff;
+  border: 3px solid #aad3ff;
+}
+
+main .center .month ul .zaterdag,
+main .center .month ul .zondag {
+  background-color: salmon;
+  border: 3px solid red;
+}
+
+main .center .month ul .in:hover {
+  /*transform: scale(.99);*/
+  transition-duration: .1s;
+  border: 2px solid white;
+}
+
+main .center .month ul li a {
+  /*margin: auto;*/
+  padding: 0;
+}
+
+main .sidebarright {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+main .sidebarleft,
+main .sidebarright {
+  height: 92vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+main .center .month ul .today {
+  background-color: #219fdf;
+  border: 3px solid #0075b9;
+}
+
+main .center .month ul .today a {
+  color: white;
+  font-weight: bold;
+}
+
+main .center .month ul .out {
+  border: 3px solid grey;
+  background-color: darkgrey;
+  cursor: default;
+}
