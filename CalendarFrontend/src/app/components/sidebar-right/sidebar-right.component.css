@@ -1,0 +1,8 @@
+.sidebarright {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  height: 92vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  background-color: rgba(0, 0, 0, .2);
+}
